@@ -18,7 +18,7 @@ const Hero = () => (
           OAB/RS: 49.841
         </p>
         <p className="max-w-2xl font-thin sm:text-4xl border-l-2 px-3 md:px-6">
-          A defesa que você procura, com a experiência que você precisa
+          O direito que você procura, com a experiência que você precisa
         </p>
         <div className="flex gap-x-3 font-medium text-sm">
           <NavLink
