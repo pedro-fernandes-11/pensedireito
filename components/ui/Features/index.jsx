@@ -66,7 +66,7 @@ const Features = () => {
   ];
 
   return (
-    <SectionWrapper id="atuacao" className="bg-custom-library-2">
+    <div id="atuacao" className="bg-custom-library-2 p-12">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-gray-600">
         <div className="max-w-2xl sm:text-center md:mx-auto">
           <h2 className="text-slate-200 text-3xl font-semibold sm:text-4xl">
@@ -102,7 +102,7 @@ const Features = () => {
           </ul>
         </div>
       </div>
-    </SectionWrapper>
+    </div>
   );
 };
 

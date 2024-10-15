@@ -23,7 +23,7 @@ const CTA = () => {
     },
   ];
   return (
-    <SectionWrapper id="sobre" className="">
+    <>
       <div className="custom-screen">
         <div className="items-center gap-x-12 lg:flex">
           <div className="mt-6 md:mt-0">
@@ -37,27 +37,62 @@ const CTA = () => {
             </div>
             <div className="grid md:grid-cols-custom">
               <div className="flex flex-col justify-start items-start">
-                <p className="my-12 bg-white border p-4 rounded-xl text-gray-700">
-                  Desde 2000, venho prestando serviços jurídicos de excelência,
-                  com inscrição ativa na OAB/RS. Como Diretor Tesoureiro da
-                  OAB/RS Subseção Cachoeirinha em diferentes períodos, lidero
-                  com integridade e compromisso. <br /> <br /> Especializo-me em
-                  advocacia preventiva e contenciosa, abrangendo processos
-                  cíveis, contratos, trabalhistas, previdenciários e criminais.
-                  Minha vasta experiência acadêmica e profissional me permite
-                  atuar com precisão e eficiência, sendo frequentemente nomeado
-                  pelo Estado do RS como defensor dativo em processos de
-                  competência do Jecrim. <br />
-                  <br /> Meu escritório, estrategicamente localizado na Rua
-                  Deolindo Manoel Selão, 143, bairro Vale do Sol em
-                  Cachoeirinha/RS, oferece um ambiente profissional bem
-                  estruturado em um prédio próprio. Estamos próximos ao hospital
-                  de Cachoeirinha, shopping center e parque municipal,
+                <p className="my-12 bg-white border p-4 rounded-xl text-gray-700 text-justify">
+                  Márcio da Silva Fernandes, casado, atualmente com 55 anos de
+                  idade. Advogado inscrito na OAB/RS em 14/06/2000, com registro
+                  profissional no conselho de classe, sob n. 49.841. <br />
+                  <br /> Graduado pela ULBRA, em Canoas/RS. Especializando
+                  <i> latu sensu</i> em Direito Penal e Política Criminal pela
+                  UFRGS e em Direito do Trabalho pela PUC/RS, Direito
+                  Previdenciário pela FMP-OAB/RS; Especialização em Advocacia
+                  Cível pela FMP-OAB/RS.
+                  <br /> <br />{" "}
+                  <a
+                    href="https://subsecoes.oabrs.org.br/cachoeirinha/diretoria"
+                    className="underline"
+                  >
+                    Atualmente Sec. Adjunto da OAB/RS Subseção Cachoeirinha
+                  </a>
+                  , já tendo participado como Secretário Geral e Tesoureiro na
+                  mesma Subseção. Ex-membro da JARI Municipal, representando a
+                  OAB/RS Subseção de Cachoeirinha. Representante da OAB/RS
+                  Subseção de Cachoeirinha no Conselho Municipal de Habitação.
+                  Nomeações como Advogado dativo no JECrim de Cachoeirinha/RS.{" "}
+                  <br /> <br />
+                  Advogado com experiência em causas de complexidades variadas,
+                  representação em processos de competência do JECrim, Vara
+                  Criminal e Tribunal do Juri. <br /> <br /> Sucessões e
+                  contratos – Advocacia extrajudicial. Ações Cíveis, trabalhista
+                  e previdenciárias. <br /> <br /> Advocacia <i>
+                    pro bono
+                  </i>{" "}
+                  eventual de serviços jurídicos, conforme regramento interno,
+                  em favor de pessoas de baixa renda, que não dispuserem de
+                  recursos par a contração de profissional. <br /> <br />
+                  Proprietário responsável por MARCIO FERNANDES SOC IND ADV,
+                  empresa de advocacia de direito privado, com inscrição no CNPJ
+                  54.866.790/0001-11 e na OAB/RS PJ sob n. 14.901.
+                  <br /> <br />{" "}
+                  <a href="#localizacao" className="underline">
+                    Escritório em prédio próprio, estrategicamente localizado na
+                    Rua Deolindo Manoel Selão, 143, bairro Vale do Sol em
+                    Cachoeirinha/RS.{" "}
+                  </a>{" "}
+                  <br /> <br />
+                  Oferece um ambiente profissional bem estruturado, próximo ao
+                  hospital de Cachoeirinha, Shopping center e parque municipal,
                   facilitando o acesso e oferecendo estacionamento conveniente
-                  para nossos clientes. <br />
-                  <br /> Estou pronto para defender seus direitos com dedicação
-                  e expertise, proporcionando soluções jurídicas eficazes e
-                  personalizadas.
+                  para clientes. <br />
+                  <br />
+                  Pronto para defender seus direitos com dedicação e expertise,
+                  proporcionando soluções jurídicas eficazes e personalizadas.
+                  <br />
+                  <br />
+                  <a href="https://wa.me/5551986085828" className="underline">
+                    Agende sua visita
+                  </a>
+                  , teremos prazer em recebê-lo e prestar serviços jurídicos de
+                  excelência.
                 </p>
                 <NavLink
                   href="https://www.instagram.com/marciofernandesadv/"
@@ -92,7 +127,7 @@ const CTA = () => {
           </div>
         </div>
       </div>
-    </SectionWrapper>
+    </>
   );
 };
 

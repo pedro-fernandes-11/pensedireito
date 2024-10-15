@@ -43,10 +43,7 @@ const Location = () => {
   };
 
   return (
-    <SectionWrapper
-      id="localizacao"
-      className="max-w-screen-xl mx-auto px-4 md:px-8 text-gray-600"
-    >
+    <>
       <div className="max-w-2xl sm:text-center md:mx-auto">
         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
           Localização
@@ -107,7 +104,7 @@ const Location = () => {
         <div className="swiper-button-prev" onClick={goPrev}></div>
         <div className="swiper-button-next" onClick={goNext}></div>
       </div>
-    </SectionWrapper>
+    </>
   );
 };
 
