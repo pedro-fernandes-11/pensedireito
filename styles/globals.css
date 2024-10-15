@@ -32,9 +32,10 @@
 
 .bg-custom-library-2 {
   background-image: url("../assets/background-2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.bg-custom-library-3 {
+  background-image: url("../assets/background-3.jpg");
 }
 
 .swiper-button-next,

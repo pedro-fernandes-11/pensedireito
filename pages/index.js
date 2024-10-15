@@ -17,6 +17,7 @@ export default function Home() {
           href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
       </Head>
+
       <Hero />
 
       <SectionWrapper
@@ -26,14 +27,7 @@ export default function Home() {
         <CTA />
       </SectionWrapper>
 
-      <Features
-        id="atuacao"
-        className="bg-custom-library-2 max-w-screen mx-auto text-gray-600"
-      />
-
-      <SectionWrapper className="max-w-screen-xl mx-auto px-4 md:px-8 text-gray-600">
-        <Testimonials />
-      </SectionWrapper>
+      <Features />
 
       <SectionWrapper
         id="localizacao"
@@ -41,6 +35,8 @@ export default function Home() {
       >
         <Location />
       </SectionWrapper>
+
+      <Testimonials />
 
       <FixedContact />
     </>

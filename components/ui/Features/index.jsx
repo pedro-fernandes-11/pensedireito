@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import SectionWrapper from "../../SectionWrapper";
@@ -10,6 +11,20 @@ import INSSIcon from "../../../public/icons/inss.svg";
 import DireitoConsumidorIcon from "../../../public/icons/customer.svg";
 
 const Features = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const features = [
     {
       icon: (
@@ -66,42 +81,54 @@ const Features = () => {
   ];
 
   return (
-    <div id="atuacao" className="bg-custom-library-2 p-12">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-gray-600">
-        <div className="max-w-2xl sm:text-center md:mx-auto">
-          <h2 className="text-slate-200 text-3xl font-semibold sm:text-4xl">
-            Atuação
-          </h2>
-          <p className="mt-3 text-slate-300 text-lg">
-            Atualmente, meu trabalho contempla, principalmente, as seguintes
-            areas:
-          </p>
-        </div>
-        <div className="mt-12">
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, idx) => (
-              <li
-                key={idx}
-                className="bg-gradient-to-t from-[#7E7E7E]/[0.6] to-[#555555]/[0.6] p-4 rounded-xl"
-              >
-                <figure>
-                  <div className="flex items-center gap-x-4">
-                    {item.icon}
-                    <div>
-                      <span className="block text-slate-200 text-xl font-semibold">
-                        {item.title}
-                      </span>
+    <div
+      className="bg-custom-library-2 max-w-screen mx-auto px-4 md:px-8 bg-cover bg-center"
+      style={{
+        backgroundPositionY: `${offsetY * 0.5}px`,
+      }}
+    >
+      <SectionWrapper
+        id="atuacao"
+        className="max-w-screen-xl mx-auto px-4 md:px-8 text-gray-600"
+      >
+        <div>
+          <div className="max-w-2xl sm:text-center md:mx-auto">
+            <h2 className="text-slate-200 text-3xl font-semibold sm:text-4xl">
+              Atuação
+            </h2>
+            <p className="mt-3 text-slate-300 text-lg">
+              Atualmente, meu trabalho contempla, principalmente, as seguintes
+              areas:
+            </p>
+          </div>
+          <div className="mt-12">
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="bg-gradient-to-t from-[#7E7E7E]/[0.6] to-[#555555]/[0.6] p-4 rounded-xl"
+                >
+                  <figure>
+                    <div className="flex items-center gap-x-4">
+                      {item.icon}
+                      <div>
+                        <span className="block text-slate-200 text-xl font-semibold">
+                          {item.title}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <blockquote>
-                    <p className="mt-6 text-slate-200 font-thin">{item.desc}</p>
-                  </blockquote>
-                </figure>
-              </li>
-            ))}
-          </ul>
+                    <blockquote>
+                      <p className="mt-6 text-slate-200 font-thin">
+                        {item.desc}
+                      </p>
+                    </blockquote>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      </SectionWrapper>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const CTA = () => {
   ];
   return (
     <>
-      <div className="custom-screen">
+      <div className="custom-screen max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="items-center gap-x-12 lg:flex">
           <div className="mt-6 md:mt-0">
             <div className="max-w-2xl sm:text-center md:mx-auto">

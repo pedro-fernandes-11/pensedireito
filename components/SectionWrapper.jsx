@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 const SectionWrapper = ({
   children,
   className,
-  threshold = 0.05,
+  threshold = 0.1, // Increase threshold for better detection on smaller screens
   delay = 100,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,8 +33,8 @@ const SectionWrapper = ({
   return (
     <div
       ref={sectionRef}
-      className={`p-12 transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+      className={`py-12 transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
       } ${className}`}
     >
       {children}
